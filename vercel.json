@@ -26,6 +26,11 @@
       "permanent": true
     },
     {
+      "source": "/profile/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/tour/:rest*",
       "destination": "/packages",
       "permanent": true

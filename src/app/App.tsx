@@ -115,6 +115,10 @@ export default function App() {
                 path="/location/:slug"
                 element={<Navigate to="/" replace />}
               />
+              <Route
+                path="/profile/*"
+                element={<Navigate to="/" replace />}
+              />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
           </Suspense>
