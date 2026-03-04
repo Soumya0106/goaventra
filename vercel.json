@@ -1,6 +1,16 @@
 {
   "redirects": [
     {
+      "source": "/location/kashipur",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/location/kashipur/",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/location/:slug",
       "destination": "/",
       "permanent": true
@@ -24,6 +34,12 @@
       "source": "/tours/:rest*",
       "destination": "/packages",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
