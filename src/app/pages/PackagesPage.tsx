@@ -13,7 +13,7 @@ import {
   SearchX,
 } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { useState, FormEvent, useEffect, useRef } from "react";
 import {
   internationalPackages,
@@ -753,6 +753,7 @@ export function PackagesPage() {
     </div>
   );
 }
+
 
 
 

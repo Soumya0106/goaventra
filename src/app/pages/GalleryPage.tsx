@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Instagram, ExternalLink, ArrowRight } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/media/ImageWithFallback';
 
 const galleryImages = [
   {
@@ -237,3 +237,4 @@ export function GalleryPage() {
     </div>
   );
 }
+

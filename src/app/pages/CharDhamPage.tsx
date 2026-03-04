@@ -6,7 +6,7 @@ import {
   Clock,
   ArrowRight,
 } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/media/ImageWithFallback';
 import chardhamImage from '../photos/chardham.png';
 import kedarnathImage from '../photos/kedarnath.png';
 import kedarBadriImage from '../photos/kedarnathandbadrinath.png';
@@ -592,3 +592,4 @@ export function CharDhamPage() {
     </div>
   );
 }
+

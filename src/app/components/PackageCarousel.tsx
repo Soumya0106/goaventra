@@ -9,7 +9,7 @@ import {
   ArrowRight,
 } from "lucide-react";
 import { motion } from "motion/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./media/ImageWithFallback";
 import { packageToDetailsPath } from "../data/packageRouting";
 
 interface Package {
@@ -193,3 +193,4 @@ export function PackageCarousel({
     </section>
   );
 }
+

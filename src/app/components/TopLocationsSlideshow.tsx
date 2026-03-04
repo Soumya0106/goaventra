@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import Slider from "react-slick";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { ImageWithFallback } from "./media/ImageWithFallback";
 import { Link } from "react-router-dom";
 
 interface LocationSlide {
@@ -260,3 +260,4 @@ export function TopLocationsSlideshow() {
     </section>
   );
 }
+

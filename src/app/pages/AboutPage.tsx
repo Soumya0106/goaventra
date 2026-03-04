@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { motion } from 'motion/react';
 import { Award, Shield, Users, Heart, Target, Eye } from 'lucide-react';
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/media/ImageWithFallback';
 
 const values = [
   {
@@ -293,3 +293,4 @@ export function AboutPage() {
     </div>
   );
 }
+

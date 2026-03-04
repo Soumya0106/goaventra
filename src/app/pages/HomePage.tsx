@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Shield, Users, MapPin, Star, Search } from 'lucide-react';
 import Slider from "react-slick";
-import { ImageWithFallback } from '../components/figma/ImageWithFallback';
+import { ImageWithFallback } from '../components/media/ImageWithFallback';
 import { PackageCarousel } from '../components/PackageCarousel';
 import { TopLocationsSlideshow } from '../components/TopLocationsSlideshow';
 import { allPackages } from '../data/packages';
@@ -630,3 +630,4 @@ export function HomePage() {
     </div>
   );
 }
+

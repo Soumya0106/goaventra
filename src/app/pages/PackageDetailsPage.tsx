@@ -17,7 +17,7 @@ import {
   ArrowRight,
   Sparkles,
 } from "lucide-react";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
+import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { allPackages } from "../data/packages";
 import {
   packageTitleToSlug,
@@ -411,3 +411,4 @@ export function PackageDetailsPage() {
     </div>
   );
 }
+

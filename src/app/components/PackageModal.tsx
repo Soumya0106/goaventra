@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, MapPin, Calendar, Users, Utensils, Car, Hotel, Camera, Check, Phone, Mail } from 'lucide-react';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+import { ImageWithFallback } from './media/ImageWithFallback';
 import { useEffect } from 'react';
 
 interface Package {
@@ -268,3 +268,4 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
     </AnimatePresence>
   );
 }
+
