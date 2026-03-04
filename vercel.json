@@ -1,0 +1,29 @@
+{
+  "redirects": [
+    {
+      "source": "/location/:slug",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/location/:slug/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/news/:rest*",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/tour/:rest*",
+      "destination": "/packages",
+      "permanent": true
+    },
+    {
+      "source": "/tours/:rest*",
+      "destination": "/packages",
+      "permanent": true
+    }
+  ]
+}

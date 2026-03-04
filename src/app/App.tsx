@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useLocation,
 } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
@@ -109,6 +110,10 @@ export default function App() {
               <Route
                 path="/terms-and-conditions"
                 element={<TermsPage />}
+              />
+              <Route
+                path="/location/:slug"
+                element={<Navigate to="/" replace />}
               />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
