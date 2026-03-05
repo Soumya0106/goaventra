@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import { ImageWithFallback } from '../components/media/ImageWithFallback';
 import { PackageCarousel } from '../components/PackageCarousel';
 import { TopLocationsSlideshow } from '../components/TopLocationsSlideshow';
+import { InquiryModal } from '../components/InquiryModal';
 import { allPackages } from '../data/packages';
 import { useState, useEffect, useRef } from 'react';
 import chardhamHero from '../photos/chardham.png';
@@ -104,6 +105,7 @@ export function HomePage() {
   const navigate = useNavigate();
   const searchRef = useRef<HTMLFormElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
 
   useEffect(() => {
     document.title = "GoAventra - Where Adventure Begins | Tours & Travel";
@@ -281,12 +283,13 @@ export function HomePage() {
               >
                 Customize Trip
               </Link>
-              <Link
-                to="/contact"
+              <button
+                type="button"
+                onClick={() => setShowInquiryModal(true)}
                 className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full hidden md:flex items-center justify-center text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all"
               >
                 Inquiry
-              </Link>
+              </button>
             </div>
           </motion.div>
         </div>
@@ -627,6 +630,7 @@ export function HomePage() {
           </motion.div>
         </div>
       </section>
+      <InquiryModal isOpen={showInquiryModal} onClose={() => setShowInquiryModal(false)} />
     </div>
   );
 }

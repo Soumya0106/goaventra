@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react';
 import { X, MapPin, Calendar, Users, Utensils, Car, Hotel, Camera, Check, Phone, Mail } from 'lucide-react';
 import { ImageWithFallback } from './media/ImageWithFallback';
-import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { InquiryModal } from './InquiryModal';
 
 interface Package {
   id: number;
@@ -48,6 +48,8 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
     };
   }, [isOpen]);
 
+  const [showInquiryModal, setShowInquiryModal] = useState(false);
+
   // Generate default highlights if not provided
   const highlights = pkg.highlights || [
     `Experience the best of ${pkg.location}`,
@@ -67,6 +69,7 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
   ];
 
   return (
+    <>
     <AnimatePresence>
       {isOpen && (
         <>
@@ -238,14 +241,14 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
                         <Phone className="w-5 h-5" />
                         Book Now
                       </a>
-                      <Link
-                        to={`/inquiry?package=${encodeURIComponent(pkg.title)}`}
-                        onClick={onClose}
+                      <button
+                        type="button"
+                        onClick={() => setShowInquiryModal(true)}
                         className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#014D4E] px-8 py-4 rounded-full transition-colors text-lg whitespace-nowrap"
                       >
                         <Mail className="w-5 h-5" />
-                        Enquire
-                      </Link>
+                        Inquiry
+                      </button>
                     </div>
                   </div>
                   
@@ -268,6 +271,12 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
         </>
       )}
     </AnimatePresence>
+    <InquiryModal
+      isOpen={showInquiryModal}
+      onClose={() => setShowInquiryModal(false)}
+      packageName={pkg.title}
+    />
+    </>
   );
 }
 

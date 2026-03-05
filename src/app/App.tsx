@@ -9,6 +9,7 @@ import {
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
+import { FloatingInquiry } from "./components/FloatingInquiry";
 import { HomePage } from "./pages/HomePage";
 
 const PackagesPage = lazy(() =>
@@ -131,6 +132,7 @@ export default function App() {
         </main>
         <Footer />
         <FloatingWhatsApp />
+        <FloatingInquiry />
       </div>
     </Router>
   );
