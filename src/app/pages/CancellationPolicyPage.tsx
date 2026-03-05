@@ -386,10 +386,12 @@ export function CancellationPolicyPage() {
               WhatsApp Us
             </a>
             <a
-              href="mailto:info@goaventra.com"
+              href="https://wa.me/917060893636?text=Hi%20GoAventra%2C%20I%20have%20a%20question%20about%20your%20cancellation%20policy."
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-[#FF6B35] text-white px-6 py-3 rounded-lg hover:bg-[#E55A25] transition-colors font-semibold"
             >
-              Email Us
+              Inquiry on WhatsApp
             </a>
           </div>
         </div>

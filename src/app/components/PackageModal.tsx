@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { X, MapPin, Calendar, Users, Utensils, Car, Hotel, Camera, Check, Phone, Mail } from 'lucide-react';
 import { ImageWithFallback } from './media/ImageWithFallback';
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 interface Package {
   id: number;
@@ -237,13 +238,14 @@ export function PackageModal({ package: pkg, isOpen, onClose }: PackageModalProp
                         <Phone className="w-5 h-5" />
                         Book Now
                       </a>
-                      <a
-                        href="mailto:info@goaventra.com"
+                      <Link
+                        to={`/inquiry?package=${encodeURIComponent(pkg.title)}`}
+                        onClick={onClose}
                         className="flex items-center justify-center gap-2 bg-white hover:bg-gray-100 text-[#014D4E] px-8 py-4 rounded-full transition-colors text-lg whitespace-nowrap"
                       >
                         <Mail className="w-5 h-5" />
                         Enquire
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   

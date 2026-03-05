@@ -387,12 +387,12 @@ export function PackageDetailsPage() {
                   <Phone className="w-4 h-4 mr-2" />
                   Book Now
                 </a>
-                <a
-                  href="mailto:info@goaventra.com"
+                <Link
+                  to={`/inquiry?package=${encodeURIComponent(packageData.title)}&pickup=${encodeURIComponent(details.pickup)}`}
                   className="w-full inline-flex items-center justify-center border border-[#014D4E] text-[#014D4E] py-3 rounded-lg hover:bg-[#014D4E] hover:text-white transition-colors"
                 >
-                  Enquiry
-                </a>
+                  Inquiry
+                </Link>
                 <p className="text-xs text-gray-500 leading-relaxed">
                   Final fare depends on departure date, group size, and room sharing preference.
                 </p>

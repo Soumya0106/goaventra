@@ -262,7 +262,7 @@ export function HomePage() {
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center max-w-3xl mx-auto w-full">
               <Link
                 to="/packages"
-                className="bg-[#FF6B35] text-white h-12 md:h-14 px-6 md:px-8 rounded-full text-sm md:text-base font-semibold hover:bg-[#ff5722] active:bg-[#ff5722] transition-all flex items-center justify-center shadow-lg shadow-[#FF6B35]/30 hover:shadow-xl hover:shadow-[#FF6B35]/40 hover:-translate-y-0.5"
+                className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all flex items-center justify-center"
               >
                 Explore Packages
                 <ArrowRight className="ml-2 w-4 h-4" />
@@ -271,7 +271,7 @@ export function HomePage() {
                 href="https://wa.me/917060893636"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#25D366] text-white h-12 md:h-14 px-6 md:px-8 rounded-full hidden md:flex items-center justify-center text-sm md:text-base font-semibold shadow-lg shadow-[#25D366]/30 hover:bg-[#20ba5a] active:bg-[#20ba5a] hover:shadow-xl hover:-translate-y-0.5 transition-all"
+                className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full hidden md:flex items-center justify-center text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all"
               >
                 WhatsApp Now
               </a>

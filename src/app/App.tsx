@@ -41,6 +41,11 @@ const ContactPage = lazy(() =>
     default: module.ContactPage,
   })),
 );
+const InquiryPage = lazy(() =>
+  import("./pages/InquiryPage").then((module) => ({
+    default: module.InquiryPage,
+  })),
+);
 const CancellationPolicyPage = lazy(() =>
   import("./pages/CancellationPolicyPage").then((module) => ({
     default: module.CancellationPolicyPage,
@@ -103,6 +108,7 @@ export default function App() {
               <Route path="/about" element={<AboutPage />} />
               <Route path="/gallery" element={<GalleryPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/inquiry" element={<InquiryPage />} />
               <Route
                 path="/cancellation-policy"
                 element={<CancellationPolicyPage />}

@@ -2,7 +2,6 @@ import { useState, useEffect, FormEvent } from "react";
 import { motion } from "motion/react";
 import {
   Phone,
-  Mail,
   MapPin,
   Clock,
   Send,
@@ -186,20 +185,22 @@ export function ContactPage() {
 
                   <div className="flex items-start">
                     <div className="flex-shrink-0 w-12 h-12 bg-[#FF6B35]/10 rounded-full flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-[#FF6B35]" />
+                      <MessageCircle className="w-6 h-6 text-[#FF6B35]" />
                     </div>
                     <div className="ml-4">
                       <h3 className="text-[#014D4E] mb-1">
-                        Email
+                        WhatsApp
                       </h3>
                       <a
-                        href="mailto:info@goaventra.com"
+                        href="https://wa.me/917060893636?text=Hi%20GoAventra%2C%20I%20want%20to%20inquire%20about%20a%20tour%20package."
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-gray-700 hover:text-[#FF6B35] transition-colors"
                       >
-                        info@goaventra.com
+                        +91 7060893636
                       </a>
                       <p className="text-sm text-gray-500 mt-1">
-                        We'll respond within 24 hours
+                        Quick response during business hours
                       </p>
                     </div>
                   </div>
@@ -474,12 +475,14 @@ export function ContactPage() {
           >
             <div className="mb-12 p-6 bg-blue-50 rounded-2xl border border-blue-100 inline-block">
               <p className="text-[#014D4E] text-lg font-medium">
-                For business inquiries, email us at:{" "}
+                For business inquiries, message us on WhatsApp:{" "}
                 <a
-                  href="mailto:info@goaventra.com"
+                  href="https://wa.me/917060893636?text=Hi%20GoAventra%2C%20I%20have%20a%20business%20inquiry."
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[#FF6B35] hover:underline ml-1"
                 >
-                  info@goaventra.com
+                  +91 7060893636
                 </a>
               </p>
             </div>

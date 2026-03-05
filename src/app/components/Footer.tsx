@@ -204,10 +204,12 @@ export function Footer() {
                 <Mail className="w-5 h-5 text-[#FF6B35] mt-0.5 flex-shrink-0" />
                 <div>
                   <a
-                    href="mailto:info@goaventra.com"
+                    href="https://wa.me/917060893636?text=Hi%20GoAventra%2C%20I%20want%20to%20inquire%20about%20a%20tour%20package."
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-gray-300 hover:text-[#FF6B35] transition-colors"
                   >
-                    info@goaventra.com
+                    WhatsApp Inquiry
                   </a>
                 </div>
               </li>
