@@ -262,6 +262,13 @@ export function HomePage() {
               Explore spiritual journeys, mountain adventures, and create unforgettable memories with GoAventra
             </p>
             <div className="flex flex-wrap gap-3 sm:gap-4 justify-center max-w-3xl mx-auto w-full">
+              <button
+                type="button"
+                onClick={() => setShowInquiryModal(true)}
+                className="bg-white text-[#014D4E] md:bg-white/15 md:backdrop-blur-md md:text-white md:border md:border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 md:hover:bg-white/25 active:bg-gray-100 md:active:bg-white/25 transition-all flex items-center justify-center shadow-lg md:shadow-none"
+              >
+                Customise Your Trip
+              </button>
               <Link
                 to="/packages"
                 className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all flex items-center justify-center"
@@ -275,21 +282,8 @@ export function HomePage() {
                 rel="noopener noreferrer"
                 className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full hidden md:flex items-center justify-center text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all"
               >
-                WhatsApp Now
+                WhatsApp Us
               </a>
-              <Link
-                to="/packages?type=domestic"
-                className="bg-white text-[#014D4E] md:bg-white/15 md:backdrop-blur-md md:text-white md:border md:border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full text-sm md:text-base font-semibold hover:bg-gray-100 md:hover:bg-white/25 active:bg-gray-100 md:active:bg-white/25 transition-all flex items-center justify-center shadow-lg md:shadow-none"
-              >
-                Customize Trip
-              </Link>
-              <button
-                type="button"
-                onClick={() => setShowInquiryModal(true)}
-                className="bg-white/15 backdrop-blur-md text-white border border-white/30 h-12 md:h-14 px-6 md:px-8 rounded-full hidden md:flex items-center justify-center text-sm md:text-base font-semibold hover:bg-white/25 active:bg-white/25 transition-all"
-              >
-                Inquiry
-              </button>
             </div>
           </motion.div>
         </div>
