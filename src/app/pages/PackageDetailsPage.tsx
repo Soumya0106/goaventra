@@ -168,13 +168,6 @@ export function PackageDetailsPage() {
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Users className="w-5 h-5 text-[#014D4E]" />
-                    <div>
-                      <p className="text-xs text-gray-500">Min Age</p>
-                      <p className="text-[#014D4E]">{details.minAge}</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-3">
                     <Car className="w-5 h-5 text-[#014D4E]" />
                     <div>
                       <p className="text-xs text-gray-500">Pickup</p>

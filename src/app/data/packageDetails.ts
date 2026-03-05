@@ -19,7 +19,6 @@ export interface PackageDetailsContent {
   slug: string;
   travelStyles: string[];
   facilities: string[];
-  minAge: string;
   pickup: string;
   bestSeason: string;
   pricingOptions?: Array<{
@@ -53,7 +52,7 @@ const defaultFaqs: PackageFaq[] = [
   {
     question: "Is this package suitable for families?",
     answer:
-      "Yes, most of our packages are family-friendly. Please review minimum age and activity level before booking.",
+      "Yes, most of our packages are family-friendly. Please review activity level before booking.",
   },
 ];
 
@@ -74,7 +73,6 @@ const detailsBySlug: Record<
       "All Meals at Dhams",
       "Dedicated Tour Escort",
     ],
-    minAge: "12+",
     pickup: "Dehradun Airport / Railway Station",
     bestSeason: "April to June",
     highlights: [
@@ -167,7 +165,6 @@ const detailsBySlug: Record<
   "chardham-yatra-by-helicopter-may-june-2026": {
     travelStyles: ["Spiritual", "Pilgrimage", "Helicopter Tour", "Premium"],
     facilities: ["Helicopter Transfers", "VIP Darshan", "All Meals", "Dedicated Escort"],
-    minAge: "12+",
     pickup: "Dehradun Airport / Railway Station",
     bestSeason: "May to June",
     highlights: [
@@ -259,7 +256,6 @@ const detailsBySlug: Record<
   "kedarnath-and-badrinath-package-haridwar-to-haridwar": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo Traveller", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Haridwar",
     bestSeason: "May to October",
     pricingOptions: [
@@ -338,7 +334,6 @@ const detailsBySlug: Record<
   "kedarnath-and-badrinath-package-delhi-to-delhi": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo Traveller", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Delhi",
     bestSeason: "May to October",
     highlights: [
@@ -415,7 +410,6 @@ const detailsBySlug: Record<
   "chardham-package-haridwar-to-haridwar": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel/Camp Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Haridwar",
     bestSeason: "May to October",
     highlights: [
@@ -510,7 +504,6 @@ const detailsBySlug: Record<
   "chardham-package-delhi-to-delhi": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel/Camp Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Delhi",
     bestSeason: "May to October",
     highlights: [
@@ -552,7 +545,6 @@ const detailsBySlug: Record<
   "gangotri-and-yamunotri-yatra-haridwar-to-haridwar": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "10+",
     pickup: "Haridwar",
     bestSeason: "May to October",
     highlights: [
@@ -588,7 +580,6 @@ const detailsBySlug: Record<
   "gangotri-and-yamunotri-yatra-delhi-to-delhi": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "10+",
     pickup: "Delhi",
     bestSeason: "May to October",
     highlights: [
@@ -625,7 +616,6 @@ const detailsBySlug: Record<
   "kedarnath-yatra-haridwar-to-haridwar": {
     travelStyles: ["Spiritual", "Pilgrimage", "Trek", "Group Tour"],
     facilities: ["Cab/Tempo Traveller", "Hotel/Camp Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Haridwar",
     bestSeason: "May to October",
     pricingOptions: [
@@ -663,7 +653,6 @@ const detailsBySlug: Record<
   "kedarnath-yatra-delhi-to-delhi": {
     travelStyles: ["Spiritual", "Pilgrimage", "Heli Assisted", "Group Tour"],
     facilities: ["Cab/Tempo Traveller", "Hotel/Camp Stay", "Breakfast", "Dinner"],
-    minAge: "12+",
     pickup: "Delhi",
     bestSeason: "May to October",
     pricingOptions: [
@@ -702,7 +691,6 @@ const detailsBySlug: Record<
   "badrinath-yatra-delhi-to-delhi": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "10+",
     pickup: "Delhi",
     bestSeason: "May to October",
     pricingOptions: [
@@ -741,7 +729,6 @@ const detailsBySlug: Record<
   "badrinath-yatra-haridwar-to-haridwar": {
     travelStyles: ["Spiritual", "Pilgrimage", "Road Trip", "Group Tour"],
     facilities: ["Cab/Tempo/Urbania/Bus", "Hotel Stay", "Breakfast", "Dinner"],
-    minAge: "10+",
     pickup: "Haridwar",
     bestSeason: "May to October",
     pricingOptions: [
@@ -825,7 +812,6 @@ const detailsBySlug: Record<
       "Private AC Luxury Coach",
       "English-Speaking Local Guide",
     ],
-    minAge: "8+",
     pickup: "New Delhi",
     bestSeason: "Year Round",
     highlights: [
@@ -923,7 +909,6 @@ const detailsBySlug: Record<
       "Exclusive AC Vehicle",
       "On-call Trip Assistance",
     ],
-    minAge: "5+",
     pickup: "Port Blair Airport",
     bestSeason: "October to May",
     highlights: [
@@ -1003,7 +988,6 @@ const detailsBySlug: Record<
       "Exclusive AC Vehicle",
       "On-call Trip Assistance",
     ],
-    minAge: "5+",
     pickup: "Port Blair Airport",
     bestSeason: "October to May",
     highlights: [
@@ -1084,7 +1068,6 @@ const detailsBySlug: Record<
       "Daily Breakfast",
       "Guided Tours",
     ],
-    minAge: "5+",
     pickup: "Srinagar Airport",
     bestSeason: "March to October",
     highlights: [
@@ -1146,7 +1129,6 @@ const detailsBySlug: Record<
       "Breakfast",
       "Hotel Stay",
     ],
-    minAge: "3+",
     pickup: "Kochi Airport / Railway Station",
     bestSeason: "September to March",
     highlights: [
@@ -1220,7 +1202,6 @@ function buildDefaultDetails(
       "Meals",
       "Support Team",
     ],
-    minAge: "10+",
     pickup: "City Pickup Point",
     bestSeason: "Year Round",
     highlights: [
@@ -1296,3 +1277,4 @@ export const packageDetailsBySlug: Record<
     },
   ]),
 ) as Record<string, PackageDetailsContent>;
+
