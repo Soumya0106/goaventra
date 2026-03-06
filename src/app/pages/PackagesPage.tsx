@@ -129,8 +129,8 @@ export function PackagesPage() {
     setSubmitStatus("idle");
 
     try {
-      const message = `*New Package Inquiry from GoAventra Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Package:* ${formData.package || "Not specified"}%0A*Preferred Travel Date:* ${formData.travelDate || "Not specified"}%0A*Travelers:* ${formData.travelers || "Not specified"}%0A*Custom Package / Destination:* ${formData.customPackage || "Not specified"}%0A*Message:* ${formData.message}`;
-      const whatsappUrl = `https://wa.me/917060893636?text=${message}`;
+      const message = `*New Package Inquiry from GoAventra Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email}\n*Phone:* ${formData.phone}\n*Package:* ${formData.package || "Not specified"}\n*Preferred Travel Date:* ${formData.travelDate || "Not specified"}\n*Travelers:* ${formData.travelers || "Not specified"}\n*Custom Package / Destination:* ${formData.customPackage || "Not specified"}\n*Message:* ${formData.message}`;
+      const whatsappUrl = `https://wa.me/917060893636?text=${encodeURIComponent(message)}`;
 
       window.open(whatsappUrl, "_blank");
 
@@ -158,6 +158,21 @@ export function PackagesPage() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >,
   ) => {
+    if (e.target.name === "customPackage") {
+      const nextCustomPackage = e.target.value;
+      setFormData((prev) => ({
+        ...prev,
+        customPackage: nextCustomPackage,
+        package:
+          nextCustomPackage.trim().length > 0
+            ? "Custom Package"
+            : prev.package === "Custom Package"
+              ? ""
+              : prev.package,
+      }));
+      return;
+    }
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -327,7 +342,7 @@ export function PackagesPage() {
                     </p>
                   </motion.div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {displayPackages.map((pkg, index) => (
                       <motion.div
                         key={pkg.id}
@@ -368,15 +383,17 @@ export function PackagesPage() {
                             {pkg.description || 'Discover amazing destinations'}
                           </p>
                           
+                          {pkg.id !== 1 && (
                           <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center gap-2">
                               <span className="text-sm text-gray-500">{pkg.duration}</span>
                             </div>
                             <div className="text-right">
-                              <p className="text-sm text-gray-600">Starting from</p>
-                              <p className="text-xl font-bold text-green-600">{pkg.price}</p>
+                              <p className="text-xs text-gray-400 uppercase tracking-wide">Starting from</p>
+                              <p className="text-2xl font-extrabold text-green-600 leading-none mt-1">{pkg.price}</p>
                             </div>
                           </div>
+                          )}
 
                           <Link
                             to={packageToDetailsPath(pkg)}
@@ -450,21 +467,23 @@ export function PackagesPage() {
                             {pkg.description || 'Discover amazing destinations'}
                           </p>
                           
+                          {pkg.id !== 1 && (
                           <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center gap-2">
                               <span className="text-sm text-gray-500">{pkg.duration}</span>
                             </div>
                             <div className="text-right">
-                              <p className="text-sm text-gray-600">Starting from</p>
-                              <p className="text-xl font-bold text-green-600">{pkg.price}</p>
+                              <p className="text-xs text-gray-400 uppercase tracking-wide">Starting from</p>
+                              <p className="text-2xl font-extrabold text-green-600 leading-none mt-1">{pkg.price}</p>
                             </div>
                           </div>
+                          )}
 
                           <Link
                             to={packageToDetailsPath(pkg)}
                             className="block w-full bg-[#FF6B35] text-white text-center py-3 rounded-full hover:bg-[#ff5722] transition-colors font-semibold"
                           >
-                            Explore Package
+                            {pkg.id === 1 ? 'Explore Packages' : 'Explore Package'}
                           </Link>
                         </div>
                       </motion.div>
@@ -621,6 +640,9 @@ export function PackagesPage() {
                       </option>
                     )}
                   <option value="">Select a package</option>
+                  <option value="Custom Package">
+                    Custom Package
+                  </option>
                   <optgroup label="Domestic Packages">
                     {domesticPackages.map((pkg) => (
                       <option key={pkg.id} value={pkg.title}>
@@ -635,9 +657,6 @@ export function PackagesPage() {
                       </option>
                     ))}
                   </optgroup>
-                  <option value="Custom Package">
-                    Custom Package
-                  </option>
                 </select>
               </div>
             </div>
@@ -671,9 +690,9 @@ export function PackagesPage() {
                   type="number"
                   id="travelers"
                   name="travelers"
-                  min={1}
                   value={formData.travelers}
                   onChange={handleInputChange}
+                  min={1}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
                   placeholder="e.g., 4"
                 />
@@ -753,7 +772,3 @@ export function PackagesPage() {
     </div>
   );
 }
-
-
-
-

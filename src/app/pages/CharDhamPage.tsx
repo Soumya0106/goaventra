@@ -73,7 +73,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/kedarnath-and-badrinath-package-haridwar-to-haridwar', 'Rs 12,500'),
     duration: getPackageDuration('/packages/kedarnath-and-badrinath-package-haridwar-to-haridwar', '5 Nights / 6 Days'),
     route: getPackageRoute('/packages/kedarnath-and-badrinath-package-haridwar-to-haridwar', 'Sonprayag - Kedarnath - Badrinath - Rishikesh'),
-    category: 'Rs 12,500 per person',
+    category: 'Breakfast & Dinner | Cab / Tempo Traveller | Mana Village',
     transport: 'Road Trip',
     image: getPackageImage('/packages/kedarnath-and-badrinath-package-haridwar-to-haridwar', kedarBadriImage),
     link: '/packages/kedarnath-and-badrinath-package-haridwar-to-haridwar',
@@ -85,7 +85,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/kedarnath-and-badrinath-package-delhi-to-delhi', 'Rs 14,500'),
     duration: getPackageDuration('/packages/kedarnath-and-badrinath-package-delhi-to-delhi', '6 Nights / 7 Days'),
     route: getPackageRoute('/packages/kedarnath-and-badrinath-package-delhi-to-delhi', 'Delhi - Haridwar - Sonprayag - Kedarnath - Badrinath - Rishikesh - Delhi'),
-    category: 'Rs 14,500 per person',
+    category: 'Delhi Pickup | Meals Included | Ganga Aarti Visit',
     transport: 'Road Trip',
     image: getPackageImage('/packages/kedarnath-and-badrinath-package-delhi-to-delhi', kedarBadriImage),
     link: '/packages/kedarnath-and-badrinath-package-delhi-to-delhi',
@@ -109,7 +109,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/chardham-package-delhi-to-delhi', 'Rs 20,500'),
     duration: getPackageDuration('/packages/chardham-package-delhi-to-delhi', '10 Nights / 11 Days'),
     route: getPackageRoute('/packages/chardham-package-delhi-to-delhi', 'Delhi - Haridwar - Barkot - Uttarkashi - Kedarnath - Badrinath - Delhi'),
-    category: 'Rs 20,500 per person',
+    category: 'Delhi Pickup | Full Route Support | Kempty Falls Halt',
     transport: 'Road Trip',
     image: getPackageImage('/packages/chardham-package-delhi-to-delhi', chardhamImage),
     link: '/packages/chardham-package-delhi-to-delhi',
@@ -121,7 +121,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/gangotri-and-yamunotri-yatra-haridwar-to-haridwar', 'Rs 12,500'),
     duration: getPackageDuration('/packages/gangotri-and-yamunotri-yatra-haridwar-to-haridwar', '4 Nights / 5 Days'),
     route: getPackageRoute('/packages/gangotri-and-yamunotri-yatra-haridwar-to-haridwar', 'Haridwar - Barkot - Uttarkashi - Harsil - Haridwar'),
-    category: 'Rs 12,500 per person',
+    category: '2 Dham Circuit | Stay at Barkot & Harsil | Meals',
     transport: 'Road Trip',
     image: getPackageImage('/packages/gangotri-and-yamunotri-yatra-haridwar-to-haridwar', 'https://images.unsplash.com/photo-1713063968789-adf139c4a1eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW5hbGklMjB2YWxsZXklMjBuYXR1cmUlMjBtb3VudGFpbnxlbnwxfHx8fDE3NzA1NzQwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080'),
     link: '/packages/gangotri-and-yamunotri-yatra-haridwar-to-haridwar',
@@ -133,7 +133,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/gangotri-and-yamunotri-yatra-delhi-to-delhi', 'Rs 14,500'),
     duration: getPackageDuration('/packages/gangotri-and-yamunotri-yatra-delhi-to-delhi', '5 Nights / 6 Days'),
     route: getPackageRoute('/packages/gangotri-and-yamunotri-yatra-delhi-to-delhi', 'Delhi - Haridwar - Barkot - Uttarkashi - Harsil - Delhi'),
-    category: 'Rs 14,500 per person',
+    category: 'Delhi Departure | Scenic Mountain Route | Stay included',
     transport: 'Road Trip',
     image: getPackageImage('/packages/gangotri-and-yamunotri-yatra-delhi-to-delhi', 'https://images.unsplash.com/photo-1713063968789-adf139c4a1eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW5hbGklMjB2YWxsZXklMjBuYXR1cmUlMjBtb3VudGFpbnxlbnwxfHx8fDE3NzA1NzQwMDV8MA&ixlib=rb-4.1.0&q=80&w=1080'),
     link: '/packages/gangotri-and-yamunotri-yatra-delhi-to-delhi',
@@ -145,7 +145,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/kedarnath-yatra-haridwar-to-haridwar', 'Rs 8,500'),
     duration: getPackageDuration('/packages/kedarnath-yatra-haridwar-to-haridwar', '3 Nights / 4 Days'),
     route: getPackageRoute('/packages/kedarnath-yatra-haridwar-to-haridwar', 'Haridwar - Guptkashi - Kedarnath - Haridwar'),
-    category: 'Rs 8,500 per person',
+    category: 'Dedicated Kedarnath Trek | Guptkashi Stay | Meals',
     transport: 'Road Trip',
     image: getPackageImage('/packages/kedarnath-yatra-haridwar-to-haridwar', kedarnathImage),
     link: '/packages/kedarnath-yatra-haridwar-to-haridwar',
@@ -157,7 +157,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/kedarnath-yatra-delhi-to-delhi', 'Rs 10,500'),
     duration: getPackageDuration('/packages/kedarnath-yatra-delhi-to-delhi', '4 Nights / 5 Days'),
     route: getPackageRoute('/packages/kedarnath-yatra-delhi-to-delhi', 'Delhi - Rishikesh - Phata/Sirsi - Kedarnath - Srinagar - Delhi'),
-    category: 'Rs 10,500 per person',
+    category: 'Delhi Pickup | VIP Heli Assist Option | Phata Stay',
     transport: 'Road Trip',
     image: getPackageImage('/packages/kedarnath-yatra-delhi-to-delhi', kedarnathImage),
     link: '/packages/kedarnath-yatra-delhi-to-delhi',
@@ -169,7 +169,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/badrinath-yatra-delhi-to-delhi', 'Rs 10,500'),
     duration: getPackageDuration('/packages/badrinath-yatra-delhi-to-delhi', '4 Nights / 5 Days'),
     route: getPackageRoute('/packages/badrinath-yatra-delhi-to-delhi', 'Delhi - Rudraprayag - Badrinath - Rishikesh - Delhi'),
-    category: 'Rs 10,500 per person',
+    category: 'Delhi Pickup | Badrinath Focus | Tapt Kund Visit',
     transport: 'Road Trip',
     image: getPackageImage('/packages/badrinath-yatra-delhi-to-delhi', badrinathImage),
     link: '/packages/badrinath-yatra-delhi-to-delhi',
@@ -181,7 +181,7 @@ const charDhamPackages: CharDhamPackage[] = [
     price: getPackagePrice('/packages/badrinath-yatra-haridwar-to-haridwar', 'Rs 8,500'),
     duration: getPackageDuration('/packages/badrinath-yatra-haridwar-to-haridwar', '4 Nights / 5 Days'),
     route: getPackageRoute('/packages/badrinath-yatra-haridwar-to-haridwar', 'Haridwar - Rudraprayag - Badrinath - Rishikesh - Haridwar'),
-    category: 'Rs 8,500 per person',
+    category: 'Early Darshan | Vyas Gufa Visit | Rishikesh Drop',
     transport: 'Road Trip',
     image: getPackageImage('/packages/badrinath-yatra-haridwar-to-haridwar', badrinathImage),
     link: '/packages/badrinath-yatra-haridwar-to-haridwar',
@@ -189,8 +189,23 @@ const charDhamPackages: CharDhamPackage[] = [
 ];
 
 export function CharDhamPage() {
-  type PackageType = 'chardhamHeli' | 'kedarBadriHH' | 'kedarBadriDD' | 'chardhamHH';
+  type PackageType = 
+    | 'Chardham-Helicopter' 
+    | 'kedarBadri' 
+    | 'chardham'
+    | 'gangotriYamunotri'
+    | 'kedarnath'
+    | 'badrinath';
   type PickupFilter = 'All' | 'Dehradun' | 'Haridwar' | 'Delhi';
+
+  const availablePickups: Record<PackageType, string[]> = {
+    'Chardham-Helicopter': ['Dehradun'],
+    kedarBadri: ['Haridwar', 'Delhi'],
+    chardham: ['Haridwar', 'Delhi'],
+    gangotriYamunotri: ['Haridwar', 'Delhi'],
+    kedarnath: ['Haridwar', 'Delhi'],
+    badrinath: ['Haridwar', 'Delhi'],
+  };
 
   const [formData, setFormData] = useState({
     name: '',
@@ -198,8 +213,9 @@ export function CharDhamPage() {
     phone: '',
     adults: '2',
     departure: '',
+    customDepartureDate: '',
     pickupPoint: 'Dehradun',
-    packageType: 'chardhamHeli' as PackageType,
+    packageType: 'Chardham-Helicopter' as PackageType,
     message: '',
   });
   const [pickupFilter, setPickupFilter] = useState<PickupFilter>('All');
@@ -211,28 +227,30 @@ export function CharDhamPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const packageNames = {
-      chardhamHeli: 'Chardham Yatra by Helicopter',
-      kedarBadriHH: 'Kedarnath & Badrinath Package (Haridwar to Haridwar)',
-      kedarBadriDD: 'Kedarnath & Badrinath Package (Delhi to Delhi)',
-      chardhamHH: 'Chardham Package (Haridwar to Haridwar)',
+      'Chardham-Helicopter': 'Chardham Yatra by Helicopter',
+      kedarBadri: 'Kedarnath & Badrinath Package',
+      chardham: 'Chardham Package',
+      gangotriYamunotri: 'Gangotri & Yamunotri Yatra',
+      kedarnath: 'Kedarnath Yatra',
+      badrinath: 'Badrinath Yatra',
     };
-    const whatsappMessage = `Hi GoAventra! I'm interested in ${packageNames[formData.packageType as keyof typeof packageNames]}.\\n\\nName: ${formData.name}\\nEmail: ${formData.email}\\nPhone: ${formData.phone}\\nAdults: ${formData.adults}\\nDeparture: ${formData.departure}\\nPickup Point: ${formData.pickupPoint}\\nMessage: ${formData.message}`;
+    const formattedDeparture = formData.departure === 'Custom' 
+      ? `*Custom Date:* ${formData.customDepartureDate}` 
+      : formData.departure;
+
+    const whatsappMessage = `Hi GoAventra! I'm interested in *${packageNames[formData.packageType as keyof typeof packageNames]}*.\\n\\n*Full Name:* ${formData.name}\\n*Email:* ${formData.email || 'Not provided'}\\n*Phone:* ${formData.phone}\\n*Number of People:* ${formData.adults}\\n*Preferred Departure Date:* ${formattedDeparture}\\n*Pickup Point:* ${formData.pickupPoint}\\n*Special Requests:* ${formData.message || "None"}`;
     window.open(`https://wa.me/917060893636?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (e.target.name === 'packageType') {
       const selected = e.target.value as PackageType;
-      const pickupByPackage: Record<PackageType, string> = {
-        chardhamHeli: 'Dehradun',
-        kedarBadriHH: 'Haridwar',
-        kedarBadriDD: 'Delhi',
-        chardhamHH: 'Haridwar',
-      };
+      const pickups = availablePickups[selected];
+      
       setFormData({
         ...formData,
         packageType: selected,
-        pickupPoint: pickupByPackage[selected],
+        pickupPoint: pickups.includes(formData.pickupPoint) ? formData.pickupPoint : pickups[0],
       });
       return;
     }
@@ -454,32 +472,28 @@ export function CharDhamPage() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-gray-700 mb-2">Email *</label>
+                  <label className="block text-gray-700 mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
-                    required
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
-                    placeholder="your@email.com"
+                    placeholder="your@email.com (Optional)"
                   />
                 </div>
                 <div>
                   <label className="block text-gray-700 mb-2">Number of People *</label>
-                  <select
+                  <input
+                    type="number"
                     name="adults"
                     required
+                    min={1}
                     value={formData.adults}
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
-                  >
-                    {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20].map((num) => (
-                      <option key={num} value={num}>
-                        {num} {num === 1 ? 'Person' : 'People'}
-                      </option>
-                    ))}
-                  </select>
+                    placeholder="e.g., 4"
+                  />
                 </div>
               </div>
 
@@ -493,10 +507,12 @@ export function CharDhamPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
                   >
-                    <option value="chardhamHeli">Chardham Yatra by Helicopter</option>
-                    <option value="kedarBadriHH">Kedarnath & Badrinath Package (Haridwar to Haridwar)</option>
-                    <option value="kedarBadriDD">Kedarnath & Badrinath Package (Delhi to Delhi)</option>
-                    <option value="chardhamHH">Chardham Package (Haridwar to Haridwar)</option>
+                    <option value="Chardham-Helicopter">Chardham Yatra by Helicopter</option>
+                    <option value="kedarBadri">Kedarnath & Badrinath Package</option>
+                    <option value="chardham">Chardham Package</option>
+                    <option value="gangotriYamunotri">Gangotri & Yamunotri Yatra</option>
+                    <option value="kedarnath">Kedarnath Yatra</option>
+                    <option value="badrinath">Badrinath Yatra</option>
                   </select>
                 </div>
                 <div>
@@ -508,31 +524,52 @@ export function CharDhamPage() {
                     onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
                   >
-                    <option value="Dehradun">Dehradun</option>
-                    <option value="Haridwar">Haridwar</option>
-                    <option value="Delhi">Delhi</option>
+                    {availablePickups[formData.packageType].map(pickup => (
+                      <option key={pickup} value={pickup}>{pickup}</option>
+                    ))}
                   </select>
                 </div>
               </div>
 
               <div>
                 <label className="block text-gray-700 mb-2">Preferred Departure Date *</label>
-                <select
-                  name="departure"
-                  required
-                  value={formData.departure}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
-                >
-                  <option value="">Select departure date</option>
-                  {getCurrentDates().map((month) =>
-                    month.dates.map((date) => (
-                      <option key={`${month.month}-${date}`} value={`${month.month} - ${date}`}>
-                        {month.month} - {date}
-                      </option>
-                    ))
+                <div className="space-y-4">
+                  <select
+                    name="departure"
+                    required
+                    value={formData.departure}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
+                  >
+                    <option value="">Select departure date</option>
+                    {getCurrentDates().map((month) =>
+                      month.dates.map((date) => (
+                        <option key={`${month.month}-${date}`} value={`${month.month} - ${date}`}>
+                          {month.month} - {date}
+                        </option>
+                      ))
+                    )}
+                    <option value="Custom">Custom Date</option>
+                  </select>
+                  
+                  {formData.departure === 'Custom' && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: 'auto' }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <input
+                        type="date"
+                        name="customDepartureDate"
+                        required={formData.departure === 'Custom'}
+                        value={formData.customDepartureDate}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition-all"
+                      />
+                    </motion.div>
                   )}
-                </select>
+                </div>
               </div>
 
               <div>

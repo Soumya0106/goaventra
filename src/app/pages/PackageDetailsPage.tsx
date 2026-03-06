@@ -17,6 +17,8 @@ import {
   Phone,
   ArrowRight,
   Sparkles,
+  Minus,
+  Plus,
 } from "lucide-react";
 import { ImageWithFallback } from "../components/media/ImageWithFallback";
 import { allPackages } from "../data/packages";
@@ -41,6 +43,7 @@ function getFacilityIcon(facility: string) {
 }
 
 export function PackageDetailsPage() {
+  const PRICE_SLAB_MAX_TRAVELERS = 8;
   const { slug } = useParams();
   const pkg = allPackages.find((entry) => packageTitleToSlug(entry.title) === slug);
   const details = slug ? packageDetailsBySlug[slug] : undefined;
@@ -66,6 +69,7 @@ export function PackageDetailsPage() {
   const [openFaqIndex, setOpenFaqIndex] = useState(0);
   const [selectedPricingIndex, setSelectedPricingIndex] = useState(0);
   const [showInquiryModal, setShowInquiryModal] = useState(false);
+  const [travelerCount, setTravelerCount] = useState(1);
   // For packages that exist in packages.ts, use that as single source of truth for pricing.
   const pricingOptions = pkg ? [] : details?.pricingOptions ?? [];
 
@@ -86,6 +90,7 @@ export function PackageDetailsPage() {
 
   useEffect(() => {
     setSelectedPricingIndex(0);
+    setTravelerCount(1);
   }, [slug]);
 
   useEffect(() => {
@@ -122,6 +127,14 @@ export function PackageDetailsPage() {
   const selectedPricingOption = pricingOptions[selectedPricingIndex] ?? pricingOptions[0];
   const selectedOriginalPrice = selectedPricingOption?.originalPrice ?? originalPrice;
   const displayedPrice = selectedPricingOption?.price ?? packageData.price;
+
+  const getDisplayPrice = () => {
+    if (pkg?.pricePerPerson) {
+      const key = Math.max(1, Math.min(travelerCount, PRICE_SLAB_MAX_TRAVELERS));
+      return pkg.pricePerPerson[key] || pkg.price;
+    }
+    return displayedPrice;
+  };
 
   return (
     <div className="bg-gray-50">
@@ -352,8 +365,8 @@ export function PackageDetailsPage() {
                 {originalPrice && pricingOptions.length === 0 && !selectedOriginalPrice && (
                   <p className="text-gray-400 line-through text-lg">{originalPrice}</p>
                 )}
-                <p className="text-4xl text-green-600">{displayedPrice}</p>
-                <p className="text-sm text-gray-500 mt-1">per person</p>
+                <p className="text-4xl text-green-600">{getDisplayPrice()}</p>
+                <p className="text-base text-gray-500 mt-1">per person</p>
                 {selectedPricingOption && (
                   <p className="text-sm text-[#014D4E] mt-2">
                     Selected: {selectedPricingOption.label}
@@ -377,6 +390,60 @@ export function PackageDetailsPage() {
                       ))}
                     </select>
                   </div>
+                )}
+
+                {/* Traveler Counter */}
+                {pkg?.pricePerPerson && (
+                <div className="mt-5 bg-gray-50 rounded-xl px-4 py-3">
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Users className="w-4 h-4 text-[#014D4E]" />
+                      <span className="text-sm font-medium text-gray-700">Travelers</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <button
+                        type="button"
+                        onClick={() => setTravelerCount(Math.max(1, travelerCount - 1))}
+                        disabled={travelerCount <= 1}
+                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-white disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+                      >
+                        <Minus className="w-4 h-4" />
+                      </button>
+                      <input
+                        type="text"
+                        value={travelerCount || ""}
+                        onChange={(e) => {
+                          const val = e.target.value.replace(/\D/g, "");
+                          if (val === "") {
+                            // Instead of setting to 0 which allows a bad state, 
+                            // we temporarily allow the empty string behavior but 
+                            // wait for blur to snap it to 1, OR we can just force it to 1
+                            setTravelerCount(1);
+                            return;
+                          }
+                          const parsed = parseInt(val, 10);
+                          setTravelerCount(Math.max(parsed, 1));
+                        }}
+                        onBlur={() => {
+                          if (!travelerCount || travelerCount < 1) setTravelerCount(1);
+                        }}
+                        className="w-12 text-center font-bold text-[#014D4E] text-lg bg-transparent border-none focus:outline-none focus:ring-0 p-0 mx-1"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => setTravelerCount((current) => current + 1)}
+                        className="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center text-gray-600 hover:bg-white transition-colors"
+                      >
+                        <Plus className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+                  {travelerCount > PRICE_SLAB_MAX_TRAVELERS && (
+                    <p className="mt-2 text-xs text-[#014D4E]">
+                      For {travelerCount} travelers, price per person stays {getDisplayPrice()} (same as 8-traveler slab).
+                    </p>
+                  )}
+                </div>
                 )}
               </div>
               <div className="p-6 space-y-4">
@@ -413,4 +480,3 @@ export function PackageDetailsPage() {
     </div>
   );
 }
-

@@ -86,8 +86,8 @@ export function ContactPage() {
     setSubmitStatus("idle");
 
     try {
-      const message = `*New Inquiry from GoAventra Website*%0A%0A*Name:* ${formData.name}%0A*Email:* ${formData.email}%0A*Phone:* ${formData.phone}%0A*Subject:* ${formData.subject}%0A*Message:* ${formData.message}`;
-      const whatsappUrl = `https://wa.me/917060893636?text=${message}`;
+      const message = `*New Inquiry from GoAventra Website*\n\n*Name:* ${formData.name}\n*Email:* ${formData.email || "Not Provided"}\n*Phone:* ${formData.phone}\n*Subject:* ${formData.subject}\n*Message:* ${formData.message}`;
+      const whatsappUrl = `https://wa.me/917060893636?text=${encodeURIComponent(message)}`;
       
       window.open(whatsappUrl, "_blank");
 
@@ -327,17 +327,16 @@ export function ContactPage() {
                         htmlFor="email"
                         className="block text-gray-700 mb-2"
                       >
-                        Email Address *
+                        Email Address
                       </label>
                       <input
                         type="email"
                         id="email"
                         name="email"
-                        required
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none transition"
-                        placeholder="john@example.com"
+                        placeholder="john@example.com (Optional)"
                       />
                     </div>
                   </div>

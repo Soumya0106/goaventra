@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { motion } from "motion/react";
 import { ImageWithFallback } from "./media/ImageWithFallback";
 import { Link } from "react-router-dom";
+import chardhamImage from "../photos/chardham.png";
 
 interface LocationSlide {
   name: string;
@@ -24,8 +25,7 @@ const topPackages: TopPackage[] = [
     name: "Chardham",
     duration: "12D / 11N",
     price: "From Rs 24,999",
-    image:
-      "https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=1200&q=80",
+    image: chardhamImage,
     slug: "chardham-yatra",
   },
   {

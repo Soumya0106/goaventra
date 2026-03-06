@@ -16,17 +16,6 @@ type InquiryFormData = {
   specialRequests: string;
 };
 
-const defaultPickupOptions = [
-  "Dehradun",
-  "Haridwar",
-  "Delhi",
-  "Rishikesh",
-  "Port Blair",
-  "Srinagar",
-  "Kochi",
-  "On Request",
-];
-
 export function InquiryPage() {
   const [searchParams] = useSearchParams();
   const prefilledPackage = searchParams.get("package") ?? "";
@@ -56,6 +45,21 @@ export function InquiryPage() {
     specialRequests: "",
   });
 
+  const selectedPackagePickup = useMemo(() => {
+    if (!formData.packageName) {
+      return "";
+    }
+    const slug = packageTitleToSlug(formData.packageName);
+    return packageDetailsBySlug[slug]?.pickup ?? "";
+  }, [formData.packageName]);
+
+  const pickupOptions = useMemo(() => {
+    const options = Array.from(
+      new Set([selectedPackagePickup, prefilledPickup, matchedPickup].filter(Boolean)),
+    );
+    return options.length > 0 ? options : ["On Request"];
+  }, [selectedPackagePickup, prefilledPickup, matchedPickup]);
+
   useEffect(() => {
     document.title = "Package Inquiry | GoAventra";
   }, []);
@@ -67,6 +71,12 @@ export function InquiryPage() {
       pickupPoint: prefilledPickup || matchedPickup || prev.pickupPoint,
     }));
   }, [prefilledPackage, prefilledPickup, matchedPickup]);
+
+  useEffect(() => {
+    if (!pickupOptions.includes(formData.pickupPoint)) {
+      setFormData((prev) => ({ ...prev, pickupPoint: pickupOptions[0] ?? "On Request" }));
+    }
+  }, [pickupOptions, formData.pickupPoint]);
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -135,20 +145,16 @@ export function InquiryPage() {
                 <label htmlFor="inq-travelers" className="block text-gray-700 mb-2">
                   Number of People *
                 </label>
-                <select
+                <input
                   id="inq-travelers"
+                  type="number"
                   required
+                  min={1}
                   value={formData.travelers}
                   onChange={(e) => setFormData((prev) => ({ ...prev, travelers: e.target.value }))}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none"
-                >
-                  {Array.from({ length: 15 }, (_, i) => i + 1).map((count) => (
-                    <option key={count} value={String(count)}>
-                      {count} {count === 1 ? "Person" : "People"}
-                    </option>
-                  ))}
-                  <option value="16+">16+ People</option>
-                </select>
+                  placeholder="e.g., 4"
+                />
               </div>
             </div>
 
@@ -161,7 +167,16 @@ export function InquiryPage() {
                   id="inq-package"
                   required
                   value={formData.packageName}
-                  onChange={(e) => setFormData((prev) => ({ ...prev, packageName: e.target.value }))}
+                  onChange={(e) => {
+                    const nextPackage = e.target.value;
+                    const slug = packageTitleToSlug(nextPackage);
+                    const inferredPickup = packageDetailsBySlug[slug]?.pickup ?? "";
+                    setFormData((prev) => ({
+                      ...prev,
+                      packageName: nextPackage,
+                      pickupPoint: inferredPickup || "On Request",
+                    }));
+                  }}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none"
                 >
                   <option value="">Select package</option>
@@ -182,13 +197,11 @@ export function InquiryPage() {
                   onChange={(e) => setFormData((prev) => ({ ...prev, pickupPoint: e.target.value }))}
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#FF6B35] focus:border-transparent outline-none"
                 >
-                  {Array.from(new Set([...defaultPickupOptions, prefilledPickup, matchedPickup]))
-                    .filter(Boolean)
-                    .map((pickup) => (
-                      <option key={pickup} value={pickup}>
-                        {pickup}
-                      </option>
-                    ))}
+                  {pickupOptions.map((pickup) => (
+                    <option key={pickup} value={pickup}>
+                      {pickup}
+                    </option>
+                  ))}
                 </select>
               </div>
             </div>
